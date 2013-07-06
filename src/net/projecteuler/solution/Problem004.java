@@ -10,10 +10,10 @@ package net.projecteuler.solution;
  */
 public class Problem004 {
 	public static void main(String[] args) {
-		calcular();
+		calculate();
 	}
 	
-	private static void calcular() {
+	private static void calculate() {
 		long largestPalindrome = 0;
 		for (int number1=100; number1<=999; number1++) {
 			for (int number2=100; number2<=999; number2++) {

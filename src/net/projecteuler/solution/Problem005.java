@@ -1,18 +1,26 @@
 package net.projecteuler.solution;
 
-/**
- * Smallest multiple.
- * 
- * 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
- * What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? 
- */
-public class Problem005 {
+import static net.projecteuler.util.ProblemUtil.isDividedBy;
 
-	public static void main(String[] args) {
-		calculate();
+
+public class Problem005 implements Problem {
+
+	@Override
+	public String getName() {
+		return "Smallest multiple.Smallest multiple.";
 	}
 
-	private static void calculate() {
+	@Override
+	public String getDescription() {
+		StringBuilder description = new StringBuilder();
+		description.append("2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. \n");
+		description.append("What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?");
+		
+		return description.toString();
+	}
+
+	@Override
+	public long solve() {
 		int smallestNumber = 9;
 		boolean found = false;
 		
@@ -20,13 +28,13 @@ public class Problem005 {
 			smallestNumber++;
 			found = true;
 			for (int i=1; i<=20; i++) {
-				if (smallestNumber % i != 0) {
+				if (!isDividedBy(smallestNumber, i)) {
 					found = false;
 					break;
 				}
 			}
 		}
 		
-		System.out.println(smallestNumber);
+		return smallestNumber;
 	}
 }

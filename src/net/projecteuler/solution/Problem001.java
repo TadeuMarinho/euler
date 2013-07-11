@@ -1,24 +1,31 @@
 package net.projecteuler.solution;
 
-/**
- * Multiples of 3 and 5
- *
- * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. 
- * The sum of these multiples is 23.
- *
- * Find the sum of all the multiples of 3 or 5 below 1000.
- */
-public class Problem001 {
+import static net.projecteuler.util.ProblemUtil.isDividedBy;;
+
+public class Problem001 implements Problem {
 	
-	public static void main(String[] args) {
-		System.out.println(calculate());
+	@Override
+	public String getName() {
+		return "Multiples of 3 and 5.";
 	}
 	
-	private static int calculate() {
-		int sum = 0;
+	@Override
+	public String getDescription() {
+		StringBuilder description = new StringBuilder();
+		description.append("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. \n");
+		description.append("The sum of these multiples is 23. \n");
+		description.append("Find the sum of all the multiples of 3 or 5 below 1000.");
 		
-		for (int number=1; number<1000; number++) {
-			if (number % 3 == 0 || number % 5 == 0) {
+		return description.toString();
+	}
+
+	@Override
+	public long solve() {
+		int sum = 0;
+		int below = 1000;
+		
+		for (int number=1; number<below; number++) {
+			if (isDividedBy(number, 3) || isDividedBy(number, 5)) {
 				sum += number;
 			}
 		}

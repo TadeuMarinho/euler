@@ -1,24 +1,27 @@
 package net.projecteuler.solution;
 
-/**
- * Sum square difference.
- *
- * The sum of the squares of the first ten natural numbers is, 1^2 + 2^2 + ... + 102 = 385.
- * The square of the sum of the first ten natural numbers is, (1 + 2 + ... + 10)2 = 552 = 3025.
- * 
- * Hence the difference between the sum of the squares of the first ten natural numbers and 
- * the square of the sum is 3025  385 = 2640.
- * 
- * Find the difference between the sum of the squares of the first one hundred natural 
- * numbers and the square of the sum.
- */
-public class Problem006 {
+public class Problem006 implements Problem {
 
-	public static void main(String[] args) {
-		calculate();
+	@Override
+	public String getName() {
+		return "Sum square difference.";
 	}
 
-	private static void calculate() {
+	@Override
+	public String getDescription() {
+		StringBuilder description = new StringBuilder();
+		description.append("The sum of the squares of the first ten natural numbers is, 1^2 + 2^2 + ... + 102 = 385. \n");
+		description.append("The square of the sum of the first ten natural numbers is, (1 + 2 + ... + 10)2 = 552 = 3025. \n");
+		description.append("Hence the difference between the sum of the squares of the first ten natural numbers and \n");
+		description.append("the square of the sum is 3025  385 = 2640. \n");
+		description.append("Find the difference between the sum of the squares of the first one hundred natural \n");
+		description.append("numbers and the square of the sum.");
+		
+		return description.toString();
+	}
+
+	@Override
+	public long solve() {
 		int sunOfsquares = 0;
 		int squareOfSum = 0;
 		
@@ -28,6 +31,6 @@ public class Problem006 {
 		}
 		
 		squareOfSum *= squareOfSum;
-		System.out.println(squareOfSum - sunOfsquares);
+		return (squareOfSum - sunOfsquares);
 	}
 }

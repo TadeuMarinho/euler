@@ -21,7 +21,7 @@ public class Problem006 implements Problem {
 	}
 
 	@Override
-	public long solve() {
+	public String solve() {
 		int sunOfsquares = 0;
 		int squareOfSum = 0;
 		
@@ -31,12 +31,11 @@ public class Problem006 implements Problem {
 		}
 		
 		squareOfSum *= squareOfSum;
-		return (squareOfSum - sunOfsquares);
+		return Integer.toString(squareOfSum - sunOfsquares);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

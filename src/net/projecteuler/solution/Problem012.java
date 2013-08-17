@@ -30,8 +30,7 @@ public class Problem012 implements Problem {
 	}
 
 	@Override
-	public long solve() {
-		//7919
+	public String solve() {
 		long result = 0;
 		long triangleNumberPosition = 1;
 		while (true) {
@@ -41,12 +40,11 @@ public class Problem012 implements Problem {
 			}
 		}
 		
-		return result;
+		return Long.toString(result);
 	}
 
 	@Override
-	public long solveAsProposed() {
-		// TODO Auto-generated method stub
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

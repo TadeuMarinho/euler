@@ -21,27 +21,26 @@ public class Problem009 implements Problem {
 	}
 
 	@Override
-	public long solve() {
-		long result = 0;
+	public String solve() {
+		long product = 0;
 		
 		int c = 1;
-		while (result == 0) {
+		while (product == 0) {
 			for (int b=1; b<c; b++) {
 				for (int a=1; a<b; a++) {
 					if (isPythagoreanTriplet(a, b, c)) {
-						result = a * b * c;
+						product = a * b * c;
 					}
 				}
 			}
 			c++;
 		}
 		
-		return result;
+		return Long.toString(product);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

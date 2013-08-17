@@ -7,7 +7,7 @@ public class Problem005 implements Problem {
 
 	@Override
 	public String getName() {
-		return "Smallest multiple.Smallest multiple.";
+		return "Smallest multiple.";
 	}
 
 	@Override
@@ -20,7 +20,7 @@ public class Problem005 implements Problem {
 	}
 
 	@Override
-	public long solve() {
+	public String solve() {
 		int smallestNumber = 9;
 		boolean found = false;
 		
@@ -35,12 +35,11 @@ public class Problem005 implements Problem {
 			}
 		}
 		
-		return smallestNumber;
+		return Long.toString(smallestNumber);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

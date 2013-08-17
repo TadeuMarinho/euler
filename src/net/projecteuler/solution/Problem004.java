@@ -20,7 +20,7 @@ public class Problem004 implements Problem {
 	}
 
 	@Override
-	public long solve() {
+	public String solve() {
 		long largestPalindrome = 0;
 		
 		for (int number1=100; number1<=999; number1++) {
@@ -34,12 +34,11 @@ public class Problem004 implements Problem {
 			}
 		}
 		
-		return largestPalindrome;
+		return Long.toString(largestPalindrome);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

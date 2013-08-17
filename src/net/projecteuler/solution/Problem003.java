@@ -21,7 +21,7 @@ public class Problem003 implements Problem {
 	}
 	
 	@Override
-	public long solve() {
+	public String solve() {
 		double primeFactorOf = 600851475143d;
 		long prime = firstPrime();
 		
@@ -33,12 +33,11 @@ public class Problem003 implements Problem {
 			}
 		}
 
-		return prime;
+		return Double.toString(prime);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

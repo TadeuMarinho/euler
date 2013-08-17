@@ -19,26 +19,25 @@ public class Problem010 implements Problem {
 	}
 
 	@Override
-	public long solve() {
-		long result = 0;
+	public String solve() {
+		long sum = 0;
 		long nextPrime = 0;
 		
 		while (true) {
 			nextPrime = nextPrime(nextPrime);
 			if (nextPrime < 2000000) {
 				System.out.println(nextPrime);
-				result += nextPrime;
+				sum += nextPrime;
 			} else {
 				break;
 			}
 		}
 		
-		return result;
+		return Long.toString(sum);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

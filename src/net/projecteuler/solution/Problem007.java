@@ -19,18 +19,17 @@ public class Problem007 implements Problem {
 	}
 
 	@Override
-	public long solve() {
+	public String solve() {
 		long nextPrime = 0;
 		for (int primeCounter = 1; primeCounter <=10001; primeCounter++) {
 			nextPrime = nextPrime(nextPrime);
 		}
 		
-		return nextPrime;
+		return Long.toString(nextPrime);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

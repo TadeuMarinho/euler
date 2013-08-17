@@ -6,7 +6,7 @@ public interface Problem {
 	
 	String getDescription();
 	
-	long solve();
+	String solve();
 	
-	long solveAsProposed();
+	String solveAsProposed();
 }

@@ -20,8 +20,8 @@ public class Problem001 implements Problem {
 	}
 
 	@Override
-	public long solve() {
-		int sum = 0;
+	public String solve() {
+		long sum = 0;
 		int below = 1000;
 		
 		for (int number=1; number<below; number++) {
@@ -30,12 +30,13 @@ public class Problem001 implements Problem {
 			}
 		}
 		
-		return sum;
+		return Long.toString(sum);
 	}
 
 	@Override
-	public long solveAsProposed() {
-		return sumDivisibleBy(3, 999) + sumDivisibleBy(5, 999) - sumDivisibleBy(15, 999);
+	public String solveAsProposed() {
+		long sum = sumDivisibleBy(3, 999) + sumDivisibleBy(5, 999) - sumDivisibleBy(15, 999);
+		return Long.toString(sum);
 	}
 
 	private long sumDivisibleBy(long n, long target) {

@@ -21,10 +21,10 @@ public class Problem002 implements Problem {
 	}
 
 	@Override
-	public long solve() {
+	public String solve() {
 		int actual = 1;
 		int prev = 0;
-		int sum = 0;
+		long sum = 0;
 		
 		do {
 			int aux = actual;
@@ -37,12 +37,11 @@ public class Problem002 implements Problem {
 			
 		} while ((actual + prev) < 4000000);
 		
-		return sum;
+		return Long.toString(sum);
 	}
 	
 	@Override
-	public long solveAsProposed() {
-		System.out.println("To implement");
-		return 0;
+	public String solveAsProposed() {
+		return "To implement";
 	}
 }

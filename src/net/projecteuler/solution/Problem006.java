@@ -33,4 +33,10 @@ public class Problem006 implements Problem {
 		squareOfSum *= squareOfSum;
 		return (squareOfSum - sunOfsquares);
 	}
+	
+	@Override
+	public long solveAsProposed() {
+		System.out.println("To implement");
+		return 0;
+	}
 }

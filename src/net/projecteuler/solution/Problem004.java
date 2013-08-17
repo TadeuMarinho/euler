@@ -36,4 +36,10 @@ public class Problem004 implements Problem {
 		
 		return largestPalindrome;
 	}
+	
+	@Override
+	public long solveAsProposed() {
+		System.out.println("To implement");
+		return 0;
+	}
 }

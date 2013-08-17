@@ -46,4 +46,34 @@ public class ProblemUtil {
 		
 		return number;
 	}
+	
+	public static boolean isPythagoreanTriplet(int a, int b, int c) {
+		return (isPythagorean(a, b, c) && (a + b + c == 1000));
+	}
+	
+	public static boolean isPythagorean(int a, int b, int c) {
+		return ((a * a) + (b * b)) == (c * c);
+	}
+	
+	public static long quantityOfFactors(long number) {
+		long quantity = 0;
+		
+		for (int i=1; i<=number; i++) {
+			if (isDividedBy(number, i)) {
+				quantity++;
+			}
+		}
+		
+		return quantity;
+	}
+	
+	public static long triangleNumber(long position) {
+		long triangleNumber = 0;
+		
+		for (int i=1; i<=position; i++) {
+			triangleNumber += i;
+		}
+		
+		return triangleNumber;
+	}
 }

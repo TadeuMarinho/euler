@@ -35,4 +35,10 @@ public class Problem003 implements Problem {
 
 		return prime;
 	}
+	
+	@Override
+	public long solveAsProposed() {
+		System.out.println("To implement");
+		return 0;
+	}
 }

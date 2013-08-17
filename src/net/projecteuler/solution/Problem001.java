@@ -32,4 +32,14 @@ public class Problem001 implements Problem {
 		
 		return sum;
 	}
+
+	@Override
+	public long solveAsProposed() {
+		return sumDivisibleBy(3, 999) + sumDivisibleBy(5, 999) - sumDivisibleBy(15, 999);
+	}
+
+	private long sumDivisibleBy(long n, long target) {
+		long p = target / n;
+		return n * (p * (p + 1)) / 2;
+	}
 }

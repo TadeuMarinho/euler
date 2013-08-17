@@ -7,4 +7,6 @@ public interface Problem {
 	String getDescription();
 	
 	long solve();
+	
+	long solveAsProposed();
 }

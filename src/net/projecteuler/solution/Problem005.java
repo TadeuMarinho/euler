@@ -37,4 +37,10 @@ public class Problem005 implements Problem {
 		
 		return smallestNumber;
 	}
+	
+	@Override
+	public long solveAsProposed() {
+		System.out.println("To implement");
+		return 0;
+	}
 }

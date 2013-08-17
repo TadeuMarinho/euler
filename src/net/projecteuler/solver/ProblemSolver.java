@@ -10,6 +10,7 @@ public class ProblemSolver {
 				System.out.println("Problem: " + problem.getName());
 				System.out.println("Description: " + problem.getDescription());
 				System.out.println("Result: " + problem.solve());
+				System.out.println("Result as proposed: " + problem.solveAsProposed());
 			} catch (InstantiationException e) {
 				System.out.println("Object cannot be instantiated!");
 			} catch (IllegalAccessException e) {
